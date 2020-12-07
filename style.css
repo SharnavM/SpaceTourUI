@@ -1,0 +1,300 @@
+@font-face {
+    font-family: Sequel;
+    src: url("Assets/Sequel_Demo.ttf");
+}
+
+@font-face {
+    font-family: TomatoRound;
+    src: url("Assets/tomatoroundcondensed-thin.ttf");
+}
+
+.bg {
+    background: url("Assets/bg.jpeg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.bgCover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: auto;
+}
+
+.alignCenter {
+    text-align: center;
+    margin-top: 7%;
+    user-select: none;
+}
+
+#MainTxt {
+    font-size: 16vh;
+    font-family: Sequel;
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    text-shadow: 4px 4px 8px black;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#SubTxt {
+    font-size: 2.5vh;
+    font-family: Sequel;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 45.5%;
+    text-shadow: 4px 4px 8px black;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#MainTxt:hover,
+#SubTxt:hover {
+    text-shadow: 8px 8px 8px black;
+}
+
+.TourBtn {
+    color: white;
+    font-family: Sequel;
+    font-size: 2.4vh;
+    position: absolute;
+    left: 45%;
+    bottom: 12%;
+    width: 10%;
+    background: linear-gradient(#FDC98C 1%, rgb(197, 0, 49));
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 0.5%;
+}
+
+.TourBtn:hover {
+    cursor: pointer;
+}
+
+.rightPane {
+    position: absolute;
+    right: 3%;
+    top: 28%;
+    text-align: right;
+    letter-spacing: 0.1px;
+
+}
+
+.rightPane .Head {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3vh;
+    font-family: TomatoRound;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
+
+.rightPane .Info {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: TomatoRound;
+    font-size: 2.25vh;
+    letter-spacing: 0.1px;
+    margin-top: -10px;
+}
+
+.LeftPane {
+    text-align: left;
+}
+
+.LeftPane img {
+    position: absolute;
+    left: -14%;
+    top: -1%;
+    transform: scale(0.25);
+    user-select: none;
+
+}
+
+.LeftPane .Head {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3vh;
+    font-family: TomatoRound;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-top: 10px;
+    position: absolute;
+    top: 51%;
+    left: 2%;
+
+}
+
+.LeftPane .Info {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: TomatoRound;
+    font-size: 2.25vh;
+    letter-spacing: 0.1px;
+    margin-top: -10px;
+    position: absolute;
+    top: 57%;
+    left: 2%;
+    letter-spacing: -1px;
+}
+
+#head12 {
+    top: 60%;
+}
+
+#info12 {
+    top: 66%
+}
+
+#JourneyLink {
+    color: #CD5B44;
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    font-size: 1.55vh;
+}
+
+#JourneyLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.leftFooter {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    user-select: none;
+}
+
+#LeftArrow {
+    font-size: 6vh;
+    background: linear-gradient(#eee, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    bottom: 4%;
+    left: 1%;
+    cursor: pointer;
+}
+
+#JupiterImg {
+    transform: scale(0.1);
+    position: absolute;
+    bottom: -95%;
+    left: -45%;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+#JupiterImg:hover {
+    transform: translate(10px, -50px) scale(0.15);
+}
+
+#JupiName {
+    font-size: 2.25vh;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: TomatoRound;
+    position: absolute;
+    bottom: 6.5%;
+    left: 12%;
+}
+
+.rightFooter {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    user-select: none;
+}
+
+#RightArrow {
+    font-size: 6vh;
+    background: linear-gradient(#eee, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    bottom: 4%;
+    right: 1%;
+    cursor: pointer;
+}
+
+#NeptuneImg {
+    transform: scale(0.18);
+    position: absolute;
+    bottom: -23%;
+    right: -9%;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+#NeptuneImg:hover {
+    transform: translate(-10px, -50px) scale(0.23);
+}
+
+#NeptName {
+    font-size: 2.25vh;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: TomatoRound;
+    position: absolute;
+    bottom: 6.5%;
+    right: 12%;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+    font-family: Sequel;
+    font-size: 24px;
+    user-select: none;
+}
+
+#RedPlanet {
+    transform: scale(0.05);
+    position: absolute;
+    left: -480%;
+    top: -1690%;
+}
+
+.NavBar {
+    color: white;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-family: Sequel;
+    font-size: 24px;
+}
+
+.NavBar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    user-select: none;
+}
+
+.NavBar ul li {
+    margin: 2%;
+    width: 135px;
+    transition: all 0.3s ease 0s;
+}
+
+.NavBar ul li:nth-child(1) {
+    margin: 2%;
+    width: 75px;
+    transition: all 0.3s ease 0s;
+}
+
+.NavBar ul li:nth-child(4) {
+    width: 200px;
+}
+
+.NavBar ul li:hover {
+    color: #C64835;
+    cursor: pointer;
+}
