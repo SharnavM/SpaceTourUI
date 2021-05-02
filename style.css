@@ -8,48 +8,44 @@
     src: url("Assets/tomatoroundcondensed-thin.ttf");
 }
 
-.bg {
-    background: url("Assets/bg.jpeg");
-    background-size: cover;
+body {
     overflow: hidden;
+    background-color: black;
 }
 
-.bgCover {
-    background-color: rgba(0, 0, 0, 0.5);
+#MarsIMG {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    overflow: auto;
-}
-
-.alignCenter {
-    text-align: center;
-    margin-top: 7%;
+    top: 50%;
+    left: 50%;
+    background: url("./Assets/Mars.png") no-repeat;
+    width: 718px;
+    height: 715px;
+    transform: translate(-50%, -50%);
     user-select: none;
+    margin-left: 1%;
 }
 
 #MainTxt {
-    font-size: 16vh;
+    font-size: 9vw;
     font-family: Sequel;
     color: white;
     position: absolute;
-    top: 35%;
-    left: 40%;
+    top: 47.5%;
+    left: 51%;
     text-shadow: 4px 4px 8px black;
     user-select: none;
+    transform: translate(-50%, -50%);
     transition: all 0.3s ease-in-out;
 }
 
 #SubTxt {
-    font-size: 2.5vh;
+    font-size: 1.4vw;
     font-family: Sequel;
     color: white;
     position: absolute;
     top: 55%;
-    left: 45.5%;
+    left: 46%;
+    margin-top: 20px;
     text-shadow: 4px 4px 8px black;
     text-transform: uppercase;
     user-select: none;
@@ -66,14 +62,16 @@
     font-family: Sequel;
     font-size: 2.4vh;
     position: absolute;
-    left: 45%;
-    bottom: 12%;
+    left: 50%;
+    bottom: 2%;
     width: 10%;
     background: linear-gradient(#FDC98C 1%, rgb(197, 0, 49));
     border: none;
     outline: none;
     border-radius: 50px;
     padding: 0.5%;
+    transform: translate(-50%, -50%);
+
 }
 
 .TourBtn:hover {
@@ -89,7 +87,7 @@
 
 }
 
-.rightPane .Head {
+.Head {
     color: rgba(255, 255, 255, 0.8);
     font-size: 3vh;
     font-family: TomatoRound;
@@ -98,8 +96,9 @@
     margin-top: 10px;
 }
 
-.rightPane .Info {
-    color: rgba(255, 255, 255, 0.5);
+
+.Info {
+    color: rgba(255, 255, 255, 0.6);
     font-family: TomatoRound;
     font-size: 2.25vh;
     letter-spacing: 0.1px;
@@ -112,32 +111,20 @@
 
 .LeftPane img {
     position: absolute;
-    left: -14%;
-    top: -1%;
-    transform: scale(0.25);
+    left: 6%;
+    top: 35%;
+    width: 12%;
+    transform: translate(-50%, -50%);
     user-select: none;
-
 }
 
 .LeftPane .Head {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 3vh;
-    font-family: TomatoRound;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-top: 10px;
     position: absolute;
     top: 51%;
     left: 2%;
-
 }
 
 .LeftPane .Info {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: TomatoRound;
-    font-size: 2.25vh;
-    letter-spacing: 0.1px;
-    margin-top: -10px;
     position: absolute;
     top: 57%;
     left: 2%;
@@ -149,8 +136,9 @@
 }
 
 #info12 {
-    top: 66%
+    top: 66%;
 }
+
 
 #JourneyLink {
     color: #CD5B44;
@@ -165,18 +153,16 @@
     cursor: pointer;
 }
 
-.leftFooter {
+.leftFooter,
+.rightFooter {
     display: flex;
     flex-direction: row;
-    user-select: none;
     user-select: none;
 }
 
 #LeftArrow {
     font-size: 6vh;
-    background: linear-gradient(#eee, brown);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #eee;
     position: absolute;
     bottom: 4%;
     left: 1%;
@@ -184,16 +170,12 @@
 }
 
 #JupiterImg {
-    transform: scale(0.1);
+    width: 10%;
     position: absolute;
-    bottom: -95%;
-    left: -45%;
+    bottom: 0%;
+    left: 2.5%;
     transition: all 0.6s ease-in-out;
     cursor: pointer;
-}
-
-#JupiterImg:hover {
-    transform: translate(10px, -50px) scale(0.15);
 }
 
 #JupiName {
@@ -205,18 +187,9 @@
     left: 12%;
 }
 
-.rightFooter {
-    display: flex;
-    flex-direction: row;
-    user-select: none;
-    user-select: none;
-}
-
 #RightArrow {
     font-size: 6vh;
-    background: linear-gradient(#eee, brown);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #eee;
     position: absolute;
     bottom: 4%;
     right: 1%;
@@ -224,16 +197,12 @@
 }
 
 #NeptuneImg {
-    transform: scale(0.18);
+    width: 6%;
     position: absolute;
-    bottom: -23%;
-    right: -9%;
+    bottom: 3.5%;
+    right: 4%;
     transition: all 0.6s ease-in-out;
     cursor: pointer;
-}
-
-#NeptuneImg:hover {
-    transform: translate(-10px, -50px) scale(0.23);
 }
 
 #NeptName {
@@ -256,10 +225,10 @@
 }
 
 #RedPlanet {
-    transform: scale(0.05);
+    width: 50%;
     position: absolute;
-    left: -480%;
-    top: -1690%;
+    left: -55%;
+    top: -40%;
 }
 
 .NavBar {
