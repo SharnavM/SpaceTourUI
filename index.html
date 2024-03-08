@@ -1,73 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-    <title>Welcome to Space Tour</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    <canvas id="stars"></canvas>
-    <div class="logo">
-        <img src="Assets/redPlanet.png" id="RedPlanet">
-        <div>SPACE<span style="color: crimson;">TOUR</span></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SpaceTourUI</title>
+  </head>
+  <body>
+    <canvas class="canvas"></canvas>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="./Assets/redPlanet.png" class="logoImg" />
+          <div class="text">SPACE<span>TOUR</span></div>
+        </div>
+        <div class="navbar">
+          <span>Home</span>
+          <span>About Us</span>
+          <span>Colonies</span>
+          <span>The Program</span>
+          <span>Planets</span>
+        </div>
+      </div>
+      <div class="body">
+        <div class="leftPane">
+          <img src="./Assets/asteroid.png" alt="" />
+          <div class="info">
+            <div class="card">
+              <div class="header">ASTEROID</div>
+              <div class="text">3201 JUNG</div>
+            </div>
+            <div class="card">
+              <div class="header">LAUNCH DATE & RETURN</div>
+              <div class="text"></div>
+            </div>
+          </div>
+          <div class="iter">+ View Itinerary</div>
+        </div>
+        <div class="middle">
+          <img src="./Assets/Mars.png" />
+          <div class="text">
+            <div class="main">MARS</div>
+            <div class="subText">The red planet</div>
+          </div>
+          <div class="button">START TOUR</div>
+        </div>
+        <div class="rightPane">
+          <div class="info">
+            <div class="card">
+              <div class="header">MOONS</div>
+              <div class="text">Phobos, Deimos</div>
+            </div>
+            <div class="card">
+              <div class="header">RADIUS</div>
+              <div class="text">3,390 km</div>
+            </div>
+            <div class="card">
+              <div class="header">DISTANCE FROM SUN</div>
+              <div class="text">212.4 million km</div>
+            </div>
+            <div class="card">
+              <div class="header">ORBITAL PERIOD</div>
+              <div class="text">687 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="NavBar">
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Colonies</li>
-            <li>The Program</li>
-            <li>Planets</li>
-        </ul>
-    </div>
-
-    <div id="MarsIMG"></div>
-    <span id="MainTxt">MARS</span> <span id="SubTxt">The red planet</span>
-
-    <button class="TourBtn">START TOUR</button>
-
-    <div class="LeftPane">
-        <img src="Assets/asteroid.png" class="AsteroidImg"><br><br>
-        <div class="Head">Asteroid </div>
-        <div class="Info">3201 JUNG</div><br><br><br>
-        <div class="Head" id="head12">Launch Date & Return</div>
-        <div class="Info" id="info12">Nov 2020 - Aug 2022</div>
-        <div id="JourneyLink">+ View Itinerary</div>
-    </div>
-
-    <div class="rightPane">
-        <div class="Head">Moons</div> <br>
-        <div class="Info">Phobos, Deimos</div><br><br><br>
-        <div class="Head">Radius</div> <br>
-        <div class="Info">3,390 km</div><br><br><br>
-        <div class="Head">Distance from Sun</div> <br>
-        <div class="Info">212.4 million km</div><br><br><br>
-        <div class="Head">Orbital Period</div> <br>
-        <div class="Info">687 days</div>
-    </div>
-
-
-    <div class="leftFooter">
-        <span id="LeftArrow">
-            &lt;
-        </span>
-        <img src="Assets/Jupiter-PNG-Photos.png" id="JupiterImg">
-        <span id="JupiName">JUPITER</span>
-    </div>
-
-    <div class="RightFooter">
-        <span id="RightArrow">
-            &gt;
-        </span>
-        <img src="Assets/neptune.png" id="NeptuneImg">
-        <span id="NeptName">NEPTUNE</span>
-    </div>
-
-    <script src="sketch.js"></script>
-
-</body>
-
+    <script src="./sketch.js"></script>
+  </body>
 </html>

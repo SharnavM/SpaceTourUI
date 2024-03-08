@@ -1,269 +1,271 @@
 @font-face {
-    font-family: Sequel;
-    src: url("Assets/Sequel_Demo.ttf");
+  font-family: Sequel;
+  src: url("Assets/Sequel_Demo.ttf");
 }
 
 @font-face {
-    font-family: TomatoRound;
-    src: url("Assets/tomatoroundcondensed-thin.ttf");
+  font-family: TomatoRound;
+  src: url("Assets/tomatoroundcondensed-thin.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overflow: hidden;
-    background-color: black;
+  background-color: black;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
-#MarsIMG {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: url("./Assets/Mars.png") no-repeat;
-    width: 718px;
-    height: 715px;
-    transform: translate(-50%, -50%);
-    user-select: none;
-    margin-left: 1%;
+canvas {
+  position: absolute;
+  z-index: -1;
+  min-height: max-content;
 }
 
-#MainTxt {
-    font-size: 9vw;
-    font-family: Sequel;
-    color: white;
-    position: absolute;
-    top: 47.5%;
-    left: 51%;
-    text-shadow: 4px 4px 8px black;
-    user-select: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
+.container {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
-#SubTxt {
-    font-size: 1.4vw;
-    font-family: Sequel;
-    color: white;
-    position: absolute;
-    top: 55%;
-    left: 46%;
-    margin-top: 20px;
-    text-shadow: 4px 4px 8px black;
-    text-transform: uppercase;
-    user-select: none;
-    transition: all 0.3s ease-in-out;
-}
-
-#MainTxt:hover,
-#SubTxt:hover {
-    text-shadow: 8px 8px 8px black;
-}
-
-.TourBtn {
-    color: white;
-    font-family: Sequel;
-    font-size: 2.4vh;
-    position: absolute;
-    left: 50%;
-    bottom: 2%;
-    width: 10%;
-    background: linear-gradient(#FDC98C 1%, rgb(197, 0, 49));
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    padding: 0.5%;
-    transform: translate(-50%, -50%);
-
-}
-
-.TourBtn:hover {
-    cursor: pointer;
-}
-
-.rightPane {
-    position: absolute;
-    right: 3%;
-    top: 28%;
-    text-align: right;
-    letter-spacing: 0.1px;
-
-}
-
-.Head {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 3vh;
-    font-family: TomatoRound;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-top: 10px;
-}
-
-
-.Info {
-    color: rgba(255, 255, 255, 0.6);
-    font-family: TomatoRound;
-    font-size: 2.25vh;
-    letter-spacing: 0.1px;
-    margin-top: -10px;
-}
-
-.LeftPane {
-    text-align: left;
-}
-
-.LeftPane img {
-    position: absolute;
-    left: 6%;
-    top: 35%;
-    width: 12%;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
-.LeftPane .Head {
-    position: absolute;
-    top: 51%;
-    left: 2%;
-}
-
-.LeftPane .Info {
-    position: absolute;
-    top: 57%;
-    left: 2%;
-    letter-spacing: -1px;
-}
-
-#head12 {
-    top: 60%;
-}
-
-#info12 {
-    top: 66%;
-}
-
-
-#JourneyLink {
-    color: #CD5B44;
-    position: absolute;
-    top: 70%;
-    left: 2%;
-    font-size: 1.55vh;
-}
-
-#JourneyLink:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.leftFooter,
-.rightFooter {
-    display: flex;
-    flex-direction: row;
-    user-select: none;
-}
-
-#LeftArrow {
-    font-size: 6vh;
-    color: #eee;
-    position: absolute;
-    bottom: 4%;
-    left: 1%;
-    cursor: pointer;
-}
-
-#JupiterImg {
-    width: 10%;
-    position: absolute;
-    bottom: 0%;
-    left: 2.5%;
-    transition: all 0.6s ease-in-out;
-    cursor: pointer;
-}
-
-#JupiName {
-    font-size: 2.25vh;
-    color: rgba(255, 255, 255, 0.8);
-    font-family: TomatoRound;
-    position: absolute;
-    bottom: 6.5%;
-    left: 12%;
-}
-
-#RightArrow {
-    font-size: 6vh;
-    color: #eee;
-    position: absolute;
-    bottom: 4%;
-    right: 1%;
-    cursor: pointer;
-}
-
-#NeptuneImg {
-    width: 6%;
-    position: absolute;
-    bottom: 3.5%;
-    right: 4%;
-    transition: all 0.6s ease-in-out;
-    cursor: pointer;
-}
-
-#NeptName {
-    font-size: 2.25vh;
-    color: rgba(255, 255, 255, 0.8);
-    font-family: TomatoRound;
-    position: absolute;
-    bottom: 6.5%;
-    right: 12%;
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .logo {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    color: white;
-    font-family: Sequel;
-    font-size: 24px;
-    user-select: none;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  padding: 20px;
 }
 
-#RedPlanet {
-    width: 50%;
-    position: absolute;
-    left: -55%;
-    top: -40%;
+.logo img {
+  width: 4rem;
+  object-fit: contain;
 }
 
-.NavBar {
-    color: white;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    font-family: Sequel;
-    font-size: 24px;
+.logo .text {
+  font-size: 2rem;
+  color: white;
+  font-family: Sequel;
+  align-self: center;
 }
 
-.NavBar ul {
-    display: flex;
+.logo .text span {
+  color: crimson;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-family: Sequel;
+  color: white;
+  align-self: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.navbar span {
+  display: inline-block;
+  transition: color 0.3s ease;
+  min-width: fit-content;
+}
+
+.navbar span:hover {
+  color: #C64835;
+  cursor: pointer;
+}
+
+.container .body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-width: 100vw;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.middle img {
+  width: 25rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.middle .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  position: absolute;
+  color: white;
+  font-size: 6rem;
+  font-family: Sequel;
+  margin-left: -1rem;
+  text-shadow: 4px 4px 8px black;
+  cursor: default;
+  transform: translateY(-25%);
+}
+
+.middle .text * {
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.middle .text *:hover {
+  text-shadow: 8px 8px 8px black;
+}
+
+.middle .subText {
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: 4px 4px 8px black;
+}
+
+.button {
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#FDC98C, rgb(197, 0, 49));
+  font-family: Sequel;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.leftPane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.leftPane img {
+  width: 10rem;
+  aspect-ratio: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: TomatoRound;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightPane {
+  padding: 20px;
+}
+
+.rightPane .info {
+  align-self: flex-end;
+}
+
+.rightPane .card {
+  text-align: right;
+}
+
+.info .header {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.rightPane .header {
+  align-self: flex-end;
+}
+
+.info .text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+.iter {
+  font-size: 0.65rem;
+  color: #CD5B44;
+  margin-top: 3rem;
+}
+
+.iter:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 890px) {
+  .header {
     flex-direction: row;
-    list-style-type: none;
-    user-select: none;
-}
+  }
 
-.NavBar ul li {
-    margin: 2%;
-    width: 135px;
-    transition: all 0.3s ease 0s;
-}
+  .navbar {
+    display: none;
+  }
 
-.NavBar ul li:nth-child(1) {
-    margin: 2%;
-    width: 75px;
-    transition: all 0.3s ease 0s;
-}
+  .leftPane {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-.NavBar ul li:nth-child(4) {
-    width: 200px;
-}
+  .leftPane .info {
+    justify-content: center;
+    align-self: center;
+  }
 
-.NavBar ul li:hover {
-    color: #C64835;
-    cursor: pointer;
+  .rightPane .info {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .leftPane .card {
+    flex-direction: row;
+    align-self: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .rightPane .card {
+    flex-direction: row;
+    align-self: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+
+
+  .leftPane .card * {
+    align-self: center;
+  }
+
+  .container .body {
+    flex-direction: column;
+  }
+
+  .middle {
+    margin-top: 2rem;
+  }
 }
